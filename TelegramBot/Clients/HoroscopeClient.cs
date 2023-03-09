@@ -25,24 +25,24 @@ public class HoroscopeClient : IHoroscopeClient
 
     public readonly Dictionary<ZodiacSign, string> ZodiacTextMap = new()
     {
-        { ZodiacSign.Aquarius, "Водолей" },
-        { ZodiacSign.Pisces, "Рыбы" },
-        { ZodiacSign.Aries, "Овен" },
-        { ZodiacSign.Taurus, "Телец"},
-        { ZodiacSign.Gemini, "Близнецы"},
-        { ZodiacSign.Cancer, "Рак"},
-        { ZodiacSign.Leo, "Лев"},
-        { ZodiacSign.Virgo, "Дева"},
-        { ZodiacSign.Libra, "Весы"},
-        { ZodiacSign.Scorpio, "Скорпион"},
-        { ZodiacSign.Sagittarius, "Стрелец"},
-        { ZodiacSign.Capricorn, "Козерог"},
+        { ZodiacSign.Aquarius, "Р’РѕРґРѕР»РµР№" },
+        { ZodiacSign.Pisces, "Р С‹Р±С‹" },
+        { ZodiacSign.Aries, "РћРІРµРЅ" },
+        { ZodiacSign.Taurus, "РўРµР»РµС†"},
+        { ZodiacSign.Gemini, "Р‘Р»РёР·РЅРµС†С‹"},
+        { ZodiacSign.Cancer, "Р Р°Рє"},
+        { ZodiacSign.Leo, "Р›РµРІ"},
+        { ZodiacSign.Virgo, "Р”РµРІР°"},
+        { ZodiacSign.Libra, "Р’РµСЃС‹"},
+        { ZodiacSign.Scorpio, "РЎРєРѕСЂРїРёРѕРЅ"},
+        { ZodiacSign.Sagittarius, "РЎС‚СЂРµР»РµС†"},
+        { ZodiacSign.Capricorn, "РљРѕР·РµСЂРѕРі"},
     };
 
     public ZodiacSign? GetZodiacSignOrDefault(string birthDate)
     {
         ZodiacSign? zodiacSign = null;
-        if (!DateOnly.TryParseExact(birthDate, "d", CultureInfo.InvariantCulture, DateTimeStyles.None,
+        if (!DateOnly.TryParseExact(birthDate, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None,
                 out DateOnly dateTimeBirth))
             return null;
 

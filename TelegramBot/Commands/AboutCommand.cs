@@ -19,7 +19,7 @@ public class AboutCommand : ICommand
         {
             "/hello - bot tells you hello",
             "/about - displays available commands",
-            "/horoscope <birth date> - displays today's horoscope by birth date, for example /weather 04.04.2001 (date format should be 'DD.MM.YYYY')"
+            "/horoscope <birth date> - displays today's horoscope by birth date, for example /horoscope 04.04.2001 (date format should be 'DD.MM.YYYY')"
         };
         var aboutText = $"List of available commands:\n{string.Join('\n', commandsList)}";
         await _telegramBotClient.SendTextMessageAsync(chatId, aboutText);
