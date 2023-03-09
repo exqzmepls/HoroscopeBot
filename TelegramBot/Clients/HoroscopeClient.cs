@@ -88,7 +88,7 @@ public class HoroscopeClient : IHoroscopeClient
         var randomThird = r.Next(0, third.Length - 1);
 
         string topic = ZodiacTextMap[zodiacSign] + '\n';
-        string mainBody = first[randomFirst] + second[randomSecond] + secondAdd[randomSecondAdd] + third[randomThird];
+        string mainBody = first[randomFirst] + ' ' + second[randomSecond] + ' ' + secondAdd[randomSecondAdd] + ' ' + third[randomThird];
 
 
         return topic + mainBody;
